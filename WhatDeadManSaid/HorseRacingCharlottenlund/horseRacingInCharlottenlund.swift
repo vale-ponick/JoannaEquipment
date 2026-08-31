@@ -11,7 +11,7 @@ import Foundation
 
 /* Joanna arrives at the Charlottenlund races. She places bets, meets suspicious characters, wins 4,016 kroner, and attracts the attention of bandits. Police interview witnesses to reconstruct her route.*/
 
-// MARK: - Step 1. Define Enums and structures
+// MARK: - Step 1. Define Enum and Structure
 
 enum WitnessRole { // witness c англ. 'свидетели'
     case bettor // bettor с англ. 'игрок на скачках'
@@ -58,8 +58,7 @@ func runRacesWitnesses() {
     print(untrustworthyReport)
 }
 
-/*
- 🚨 'WHAT THE DEAD MAN SAID' from JOANNA CHMIELEWSKA: project macOS Command Line Tool
+/* 🚨 'WHAT THE DEAD MAN SAID' from JOANNA CHMIELEWSKA: project macOS Command Line Tool
  EASY: Task 3. 'Horse Racing in Charlottenlund'
 
   📋 ALL WITNESSES:
@@ -74,5 +73,4 @@ func runRacesWitnesses() {
 
  🚨 UNTRUSTWORTHY WITNESSES:
  🎩 Bettor: Bald Shorty — unreliable, speaks evasively. Saw Joanna at the races, but doesn't know where she went
- 🎩 Bettor: Frenchmens — gave contradictory statements about the car
- */
+ 🎩 Bettor: Frenchmens — gave contradictory statements about the car */
