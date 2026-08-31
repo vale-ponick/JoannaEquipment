@@ -19,13 +19,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5875FC55303F4A490034C04F /* JoannaEquipment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JoannaEquipment; sourceTree = BUILT_PRODUCTS_DIR; };
+		5875FC55303F4A490034C04F /* WhatDeadManSaid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WhatDeadManSaid; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5875FC57303F4A490034C04F /* JoannaEquipment */ = {
+		5875FC57303F4A490034C04F /* WhatDeadManSaid */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = JoannaEquipment;
+			path = WhatDeadManSaid;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -44,7 +44,7 @@
 		5875FC4C303F4A490034C04F = {
 			isa = PBXGroup;
 			children = (
-				5875FC57303F4A490034C04F /* JoannaEquipment */,
+				5875FC57303F4A490034C04F /* WhatDeadManSaid */,
 				5875FC56303F4A490034C04F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,7 +52,7 @@
 		5875FC56303F4A490034C04F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5875FC55303F4A490034C04F /* JoannaEquipment */,
+				5875FC55303F4A490034C04F /* WhatDeadManSaid */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,9 +60,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5875FC54303F4A490034C04F /* JoannaEquipment */ = {
+		5875FC54303F4A490034C04F /* WhatDeadManSaid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5875FC5C303F4A490034C04F /* Build configuration list for PBXNativeTarget "JoannaEquipment" */;
+			buildConfigurationList = 5875FC5C303F4A490034C04F /* Build configuration list for PBXNativeTarget "WhatDeadManSaid" */;
 			buildPhases = (
 				5875FC51303F4A490034C04F /* Sources */,
 				5875FC52303F4A490034C04F /* Frameworks */,
@@ -73,13 +73,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5875FC57303F4A490034C04F /* JoannaEquipment */,
+				5875FC57303F4A490034C04F /* WhatDeadManSaid */,
 			);
-			name = JoannaEquipment;
+			name = WhatDeadManSaid;
 			packageProductDependencies = (
 			);
 			productName = JoannaEquipment;
-			productReference = 5875FC55303F4A490034C04F /* JoannaEquipment */;
+			productReference = 5875FC55303F4A490034C04F /* WhatDeadManSaid */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +97,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5875FC50303F4A490034C04F /* Build configuration list for PBXProject "JoannaEquipment" */;
+			buildConfigurationList = 5875FC50303F4A490034C04F /* Build configuration list for PBXProject "WhatDeadManSaid" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5875FC54303F4A490034C04F /* JoannaEquipment */,
+				5875FC54303F4A490034C04F /* WhatDeadManSaid */,
 			);
 		};
 /* End PBXProject section */
@@ -270,7 +270,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5875FC50303F4A490034C04F /* Build configuration list for PBXProject "JoannaEquipment" */ = {
+		5875FC50303F4A490034C04F /* Build configuration list for PBXProject "WhatDeadManSaid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5875FC5A303F4A490034C04F /* Debug */,
@@ -279,7 +279,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5875FC5C303F4A490034C04F /* Build configuration list for PBXNativeTarget "JoannaEquipment" */ = {
+		5875FC5C303F4A490034C04F /* Build configuration list for PBXNativeTarget "WhatDeadManSaid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5875FC5D303F4A490034C04F /* Debug */,
