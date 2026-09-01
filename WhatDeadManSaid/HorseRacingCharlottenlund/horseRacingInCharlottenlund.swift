@@ -47,13 +47,13 @@ func runRacesWitnesses() {
     print("\n 📋 ALL WITNESSES:")
     let all = witnesses.map { witness in witness.info }.joined(separator: "\n")
     print(all)
-    let trustWorthyWitnesses = witnesses.filter { value in value.isTrustworthy }
+    let trustWorthyWitnesses = witnesses.filter { witness in witness.isTrustworthy }
     
-    let trustworthyReport = trustWorthyWitnesses.map { value in value.info }.joined(separator: "\n")
+    let trustworthyReport = trustWorthyWitnesses.map { witness in witness.info }.joined(separator: "\n") // Вместо $0 / _ use явные имена "key, value"
     print("\n📌 TRUSTWORTHY WITNESSES:")
       print(trustworthyReport)
-    let untrustworthyWitnesses = witnesses.filter { value in !value.isTrustworthy }
-    let untrustworthyReport = untrustworthyWitnesses.map { value in value.info }.joined(separator: "\n")
+    let untrustworthyWitnesses = witnesses.filter { witness in !witness.isTrustworthy }
+    let untrustworthyReport = untrustworthyWitnesses.map { witness in witness.info }.joined(separator: "\n")
     print("\n🚨 UNTRUSTWORTHY WITNESSES:")
     print(untrustworthyReport)
 }

@@ -12,8 +12,8 @@ print("🚨 'WHAT THE DEAD MAN SAID' from JOANNA CHMIELEWSKA: project macOS Comm
 // MARK: -  Task 1: 'Joanna Equipment'
 // runJoannaEquipment()
 // runClueAndWitnesses()
-runRacesWitnesses()
-
+// runRacesWitnesses()
+runTestimonies()
 
       
 
