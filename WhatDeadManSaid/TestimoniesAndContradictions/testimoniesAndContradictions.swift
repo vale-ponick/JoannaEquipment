@@ -117,8 +117,10 @@ func runTestimonies() {
     
     // -------------------------------------------
     // БЛОК 1: Вывод всех показаний с тегами типов
+    print("🕵️‍♂️ Проверка записи на диск: Иоанна на месте!")
+    
     print("\n📋 ALL TESTIMONIES:")
-    for (id, testimony) in sortedTestimonies {
+    for (_, testimony) in sortedTestimonies {
         
         // 1. Твой switch для красивого тега типа показаний
         var typeTag = ""
@@ -138,7 +140,7 @@ func runTestimonies() {
     // -------------------------------------------
     // БЛОК 2: Аналитическая проверка (вызов метода из extension)
     print("\n🔍 VERIFICATION:")
-    for (id, testimony) in sortedTestimonies {
+    for (_, testimony) in sortedTestimonies {
         // Просто вызываем твою умную функцию verify()
         print(testimony.verify())
     }
@@ -153,7 +155,7 @@ func runTestimonies() {
     }
     
     // Печатаем имена надежных свидетелей через дефис
-    for (id, testimony) in reliableOnly {
+    for (_, testimony) in reliableOnly {
         print("- \(testimony.witness)")
     }
 }
@@ -179,4 +181,5 @@ func runTestimonies() {
  - Alicia
  - Small Fry
  - Inspector Jensen
+ Program ended with exit code: 0
  */
