@@ -13,8 +13,8 @@ print("🚨 'WHAT THE DEAD MAN SAID' from JOANNA CHMIELEWSKA: project macOS Comm
 // runJoannaEquipment()
 // runClueAndWitnesses()
 // runRacesWitnesses()
-runTestimonies()
-
+// runTestimonies()
+runCasinoGame()
       
 
 
