@@ -14,7 +14,8 @@ print("🚨 'WHAT THE DEAD MAN SAID' from JOANNA CHMIELEWSKA: project macOS Comm
 // runClueAndWitnesses()
 // runRacesWitnesses()
 // runTestimonies()
-runCasinoGame()
-      
+// runCasinoGame()
+runCipher()
+
 
 
