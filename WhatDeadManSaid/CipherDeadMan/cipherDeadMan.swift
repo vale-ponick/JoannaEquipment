@@ -17,11 +17,10 @@ enum CipherType {
     case coordinate // координаты сокровищ
     case landmark // ориентир
     case state // состояние
-    case uncknown // неизвестно
+    case unknown // неизвестно
 }
 
 struct CipherFragment {
-    let position: String
     let text: String
     let type: CipherType
     let isClear: Bool
@@ -29,10 +28,10 @@ struct CipherFragment {
 typealias CipherMessage = [Int: CipherFragment]
 
 let joannaMemory: CipherMessage = [
-    1: CipherFragment(position: "1️⃣", text: "Everything is 148 from 7, 1202 from B, like Bernard, two and a half meters to the center", type: .coordinate, isClear: false),
-    2: CipherFragment(position: "2️⃣", text: "entrance sealed by explosion", type: .state, isClear: true),
-    3: CipherFragment(position: "3️⃣", text: "Contact fishmonger Diego", type: .landmark, isClear: true),
-    4: CipherFragment(position: "4️⃣", text: "pa dri", type: .uncknown, isClear: false)
+    1: CipherFragment(text: "Everything is 148 from 7, 1202 from B, like Bernard, two and a half meters to the center", type: .coordinate, isClear: false),
+    2: CipherFragment(text: "entrance sealed by explosion", type: .state, isClear: true),
+    3: CipherFragment(text: "Contact fishmonger Diego", type: .landmark, isClear: true),
+    4: CipherFragment(text: "pa dri", type: .unknown, isClear: false)
 ]
 
 func emoji(for position: Int) -> String {
@@ -50,21 +49,53 @@ func emoji(for position: Int) -> String {
     }
 }
   
+// Функция дешифровки с честной проверкой через guard (как в ТЗ)
 func decipher(_ message: CipherMessage) -> String {
-    let sorted = message.sorted { $0.key < $1.key }
-    let result = sorted.map { $0.value.text }.joined(separator: " ")
-    return result
+    var resultWords: [String] = []
+    
+    // Идем строго по порядку ячеек (от 1 до 4)
+    for index in 1...4 {
+        // Проверяем: есть ли фрагмент в памяти? Если нет — пишем [пропущено]
+        guard let fragment = message[index] else {
+            resultWords.append("[пропущено]")
+            continue
+        }
+        resultWords.append(fragment.text)
+    }
+    
+    return resultWords.joined(separator: " ")
 }
 
 func runCipher() {
-    // 1. Расшифровка
     let deciphered = decipher(joannaMemory)
     print("🔐 Расшифровка: \(deciphered)")
 
-    // 2. Анализ фрагментов
     print("\n📋 Анализ фрагментов:")
-    for (key, fragment) in joannaMemory.sorted(by: { $0.key < $1.key }) {
+    for index in 1...4 {
+        guard let fragment = joannaMemory[index] else { continue }
+        
+        // Красивый перевод типов через switch
+        let typeDescription: String
+        switch fragment.type {
+        case .coordinate: typeDescription = "координата"
+        case .landmark:   typeDescription = "ориентир"
+        case .state:      typeDescription = "состояние"
+        case .unknown:    typeDescription = "неизвестно"
+        }
+        
         let clearStatus = fragment.isClear ? "✅ понятно" : "❌ непонятно"
-        print("\(emoji(for: key)) \"\(fragment.text)\" → \(fragment.type) — \(clearStatus)")
+        
+        // Используем вашу функцию emoji(for:) прямо здесь
+        print("\(emoji(for: index)) \"\(fragment.text)\" → \(typeDescription) — \(clearStatus)")
     }
 }
+/**
+ 🚨 'WHAT THE DEAD MAN SAID' from JOANNA CHMIELEWSKA: project macOS Command Line Tool
+ 🔐 Расшифровка: Everything is 148 from 7, 1202 from B, like Bernard, two and a half meters to the center entrance sealed by explosion Contact fishmonger Diego pa dri
+
+ 📋 Анализ фрагментов:
+ 1️⃣ "Everything is 148 from 7, 1202 from B, like Bernard, two and a half meters to the center" → coordinate — ❌ непонятно
+ 2️⃣ "entrance sealed by explosion" → state — ✅ понятно
+ 3️⃣ "Contact fishmonger Diego" → landmark — ✅ понятно
+ 4️⃣ "pa dri" → uncknown — ❌ непонятно
+ Program ended with exit code: 0 */
