@@ -18,4 +18,5 @@ print("🚨 'WHAT THE DEAD MAN SAID' from JOANNA CHMIELEWSKA: project macOS Comm
 //runCipher()
 // runFakeCipher()
 // runKeyholeOverheardConversation()
-runFlightAnalysis()
+// runFlightAnalysis()
+runJoannaDoubleBluff()
